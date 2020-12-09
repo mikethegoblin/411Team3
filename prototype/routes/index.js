@@ -23,7 +23,7 @@ const LOGIC = require('../weather_to_mood/logic');
 /* GET home page. */
 // Making a call to the API that gets the user's geolocation, the cleanReturnValue is the json formatting of the api call.
 // Setting values for 'geolocation' object – grabs the user's zip code and country code (2 digit country code – i.e. 'US') to render in .POST if user allows gps tracking.
-router.get('/', async (req, res, next) => {
+router.get('/weather', async (req, res, next) => {
     const response = await fetch(CONFIGDATA.geolocationConfig.url);
     const cleanReturnValue = await response.json();
     geolocation = {
@@ -34,7 +34,7 @@ router.get('/', async (req, res, next) => {
 });
 
 /* POST method – hitting the API with some data and getting values back */
-router.post('/',async (req, res, next) => {
+router.post('/weather',async (req, res, next) => {
     // grabWeatherData is making the API request to grab the weather data, 'cleanReturnValue' is the data returned parsed into JSON.
     const grabWeatherData = async (value) => {
         const response = await fetch(CONFIGDATA.weatherConfig.url + value + CONFIGDATA.weatherConfig.units + `&appid=${CONFIGDATA.weatherConfig.key}`);

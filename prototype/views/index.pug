@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   // Form that takes the user's information
-  form(name="get-data", method="POST")
+  form(name="get-data", action='/weather', method="POST")
     div.input
       span.label Want us to use your GPS coordinates?
       input(type="submit", name="use_gps", value="Yes, access my location")

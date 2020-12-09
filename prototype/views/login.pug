@@ -1,0 +1,39 @@
+doctype html
+head
+    meta(charset='utf-8')
+    title Sign In
+    link(rel='stylesheet' href='stylesheets/style.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap' rel='stylesheet')
+.main-body
+    h1 Media Roulette
+    //
+      <form name="get-data" action="/auth/twitter" method="GET">
+      <div class="input">
+      <input type="submit" name="twitter_sign_in" value="Sign in with Twitter"/>
+      </div>
+      </form>
+    .main-info
+        h2#main-info-text
+            | No day is ever
+            br
+            |  boring with
+            br
+            |  Media Roulette
+        form(name='get-data' action='/auth/twitter' method='GET')
+            .input
+                input(type='submit' name='twitter_sign_in' value='Sign in with Twitter')
+        img#img1(src='/undraw_celebration_0jvk.svg' alt='')
+    .video
+        img#img2(src='/undraw_online_media_62jb.svg' alt='')
+        h2
+            | A video for
+            br
+            |  every moment
+    .music
+        h2
+            | A playlist for
+            br
+            |  every mood
+        img#img3(src='/undraw_compose_music_ovo2.svg' alt='')
+

@@ -12,6 +12,12 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "oauth": "^0.9.15"
   }
 }
